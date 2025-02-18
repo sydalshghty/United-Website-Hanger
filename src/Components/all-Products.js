@@ -18,7 +18,7 @@ function AllProducts(){
     const [products,setProducts] = useState([]);
 
     const getAllProducts = async () => {
-       await  fetch("https://united-hanger-2025.up.railway.app//api/products",{
+       await  fetch("/api/products",{
         method: "GET",
        }).then((response) => response.json())
        .then(data => setProducts(data.products))
